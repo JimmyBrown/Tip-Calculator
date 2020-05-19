@@ -14,33 +14,13 @@ class TipCalcViewController: UIViewController {
     var billAmount: Double = 0.0
     var billPlusTipAmount: Double = 0.0
     
-    func tipFifteenPercent() {
-        let billAmount = Double(enterBillAmountTextField.text!) ?? 0
-        let total = billAmount + (billAmount * 0.15)
-        enterBillAmountTextField.text = String(total)
-    }
-    
-    
-    func tipEighteenPercent() {
-        let billAmount = Double(enterBillAmountTextField.text!) ?? 0
-        let total = billAmount + (billAmount * 0.18)
-        enterBillAmountTextField.text = String(total)
-    }
-    
-    
-    func tipTwentyPercent() {
-        let billAmount = Double(enterBillAmountTextField.text!) ?? 0
-        let total = billAmount + (billAmount * 0.20)
-        enterBillAmountTextField.text = String(total)
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
     
     // MARK: - Outlets
     @IBOutlet weak var billAmountLabel: UILabel!
     @IBOutlet weak var enterBillAmountTextField: BillAmountTextField!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
     
     // MARK: - Actions
     @IBAction func fifteenPercentButtonTapped(_ sender: Any) {
@@ -57,5 +37,33 @@ class TipCalcViewController: UIViewController {
     
     @IBAction func resetButtonTapped(_ sender: Any) {
         enterBillAmountTextField.text = ""
+    }
+    
+    func tipFifteenPercent() {
+        let billAmount = Double(enterBillAmountTextField.text!) ?? 0
+        let total = billAmount + (billAmount * 0.15)
+        enterBillAmountTextField.text = convertDoubleToCurrency(amount: total)
+        billAmountLabel.text = "You Pay"
+    }
+    
+    func tipEighteenPercent() {
+        let billAmount = Double(enterBillAmountTextField.text!) ?? 0
+        let total = billAmount + (billAmount * 0.18)
+        enterBillAmountTextField.text = convertDoubleToCurrency(amount: total)
+        billAmountLabel.text = "You Pay"
+    }
+    
+    func tipTwentyPercent() {
+        let billAmount = Double(enterBillAmountTextField.text!) ?? 0
+        let total = billAmount + (billAmount * 0.20)
+        enterBillAmountTextField.text = convertDoubleToCurrency(amount: total)
+        billAmountLabel.text = "You Pay"
+    }
+    
+    func convertDoubleToCurrency(amount: Double) -> String{
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .currency
+        numberFormatter.locale = Locale.current
+        return numberFormatter.string(from: NSNumber(value: amount))!
     }
 }

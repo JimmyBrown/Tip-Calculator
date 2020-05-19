@@ -16,6 +16,7 @@
 		BF6C67B8247331DE008121B6 /* BillAmountTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6C67B7247331DE008121B6 /* BillAmountTextField.swift */; };
 		BF6C67BB247333FD008121B6 /* Style Guide.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6C67BA247333FD008121B6 /* Style Guide.swift */; };
 		BF6C67C1247359B6008121B6 /* TipCalcButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6C67C0247359B6008121B6 /* TipCalcButton.swift */; };
+		BF6C67C524737A07008121B6 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF6C67C424737A07008121B6 /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		BF6C67B7247331DE008121B6 /* BillAmountTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillAmountTextField.swift; sourceTree = "<group>"; };
 		BF6C67BA247333FD008121B6 /* Style Guide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Style Guide.swift"; sourceTree = "<group>"; };
 		BF6C67C0247359B6008121B6 /* TipCalcButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCalcButton.swift; sourceTree = "<group>"; };
+		BF6C67C424737A07008121B6 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				BF6C67982473252C008121B6 /* AppDelegate.swift */,
 				BF6C679A2473252C008121B6 /* SceneDelegate.swift */,
 				BF6C67A12473252C008121B6 /* Assets.xcassets */,
+				BF6C67C424737A07008121B6 /* Colors.xcassets */,
 				BF6C67A32473252C008121B6 /* LaunchScreen.storyboard */,
 				BF6C67A62473252C008121B6 /* Info.plist */,
 			);
@@ -199,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF6C67A52473252C008121B6 /* LaunchScreen.storyboard in Resources */,
+				BF6C67C524737A07008121B6 /* Colors.xcassets in Resources */,
 				BF6C67A22473252C008121B6 /* Assets.xcassets in Resources */,
 				BF6C67A02473252C008121B6 /* Main.storyboard in Resources */,
 			);

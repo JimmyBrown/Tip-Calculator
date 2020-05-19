@@ -9,7 +9,7 @@
 import UIKit
 
 class TipCalcButton: UIButton {
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setupViews()
@@ -17,5 +17,8 @@ class TipCalcButton: UIButton {
     
     func setupViews() {
         self.addCornerRadius(10)
+        self.backgroundColor = .lightOrange
+        self.setTitleColor(.royalBlue, for: .normal)
+        self.addAccentBorder()
     }
 }
